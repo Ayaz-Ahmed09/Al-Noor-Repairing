@@ -1,65 +1,182 @@
-import Image from "next/image";
+import HeroSection from "./components/Hero-Section";
+import { ServicesSection } from "./components/Services-sections";
+import { AboutSection } from "./components/About-Section";
+import { WhyChooseUs } from "./components/WhyChooseUs";
+import Heading from "./components/Heading";
+import { FaqSection } from "./components/FaqSection";
+import { CtaSection } from "./components/CtaSection";
+import { TestimonialsSection } from "./components/TestimonialsSection";
+import { ContactUsSection } from "./components/ContactUsSection";
 
 export default function Home() {
+  const services = [
+    {
+      title: "AC Cleaning",
+      description:
+        "Complete deep cleaning of your AC unit including filters, coils, and drainage systems to improve airflow, efficiency, and air quality for all AC types.",
+    },
+    {
+      title: "AC General Maintenance",
+      description:
+        "Routine inspection and tune-up of your entire AC system to keep it running at peak performance, prevent breakdowns, and extend the lifespan of your unit.",
+    },
+    {
+      title: "Compressor Repair",
+      description:
+        "Expert diagnosis and repair of faulty compressors — the heart of your AC system. We service compressors for window, split, portable, chiller, and HVAC units.",
+    },
+    {
+      title: "Gas Refilling & Leak Detection",
+      description:
+        "Professional refrigerant recharging and leak detection services to restore your AC's cooling power and ensure it operates safely and efficiently.",
+    },
+    {
+      title: "AC Installation & Replacement",
+      description:
+        "Proper installation and replacement of all AC types including split units, window ACs, portable units, HVAC systems, and industrial chillers by certified technicians.",
+    },
+    {
+      title: "Thermostat & Control Board Repair",
+      description:
+        "Repair and replacement of faulty thermostats, control panels, and PCBs to restore accurate temperature control across all residential and commercial AC systems.",
+    },
+    {
+      title: "Duct Cleaning & HVAC Services",
+      description:
+        "Thorough cleaning and servicing of air ducts, vents, and HVAC systems to eliminate dust buildup, improve indoor air quality, and maximize system efficiency.",
+    },
+    {
+      title: "Chiller & Industrial AC Services",
+      description:
+        "Specialized maintenance, repair, and overhauling of commercial chillers and large-scale industrial air conditioning systems to minimize downtime and ensure uninterrupted cooling.",
+    },
+  ];
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-black font-sans dark:bg-black">
+      <div className="relative w-full bg-black z-10">
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <HeroSection />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="relative w-full bg-black z-20">
+          <AboutSection />
         </div>
-      </main>
+
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <Heading />
+        </div>
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <ServicesSection
+            id="1"
+            title="A/C Compressor Repair"
+            subtitle="Comprehensive Solutions for Your Needs"
+            description="Explore our wide range of services designed to meet your specific requirements. From professional consulting to hands-on support, we've got you covered."
+            iconName="default"
+            src="/images/Ac-Comperser-repair.jpeg"
+            accentColor="#ffffff"
+            whatsappNumber="+971000000000"
+            phoneNumber="+971000000000"
+          />
+        </div>
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <ServicesSection
+            id="2"
+            title="A/C Cleaning"
+            subtitle="Comprehensive Solutions for Your Needs"
+            description="Explore our wide range of services designed to meet your specific requirements. From professional consulting to hands-on support, we've got you covered."
+            href="/services"
+            // iconName="default"
+            src="/images/Ac-cleaning.png"
+            accentColor="#ffffff"
+            whatsappNumber="+971000000000"
+            phoneNumber="+971000000000"
+          />
+        </div>
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <ServicesSection
+            id="3"
+            title="A/C General Maintenance"
+            subtitle="Comprehensive Solutions for Your Needs"
+            description="Explore our wide range of services designed to meet your specific requirements. From professional consulting to hands-on support, we've got you covered."
+            // href="/services"
+            // iconName="default"
+            src="/images/ac-gm.webp"
+            accentColor="#ffffff"
+            whatsappNumber="+971000000000"
+            phoneNumber="+971000000000"
+          />
+        </div>
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <ServicesSection
+            id="4"
+            title="A/C Gas Refilling & Leak Detection"
+            subtitle="Comprehensive Solutions for Your Needs"
+            description="Explore our wide range of services designed to meet your specific requirements. From professional consulting to hands-on support, we've got you covered."
+            // href="/services"
+            // iconName="default"
+            src="/images/cleaning.jpeg"
+            accentColor="#ffffff"
+            whatsappNumber="+971000000000"
+            phoneNumber="+971000000000"
+          />
+        </div>
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <ServicesSection
+            id="5"
+            title="A/C Thermostat & Control Board Repair"
+            subtitle="Comprehensive Solutions for Your Needs"
+            description="Explore our wide range of services designed to meet your specific requirements. From professional consulting to hands-on support, we've got you covered."
+            // href="/services"
+            // iconName="default"
+            src="/images/thermo.png"
+            accentColor="#ffffff"
+            whatsappNumber="+971000000000"
+            phoneNumber="+971000000000"
+          />
+        </div>
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <ServicesSection
+            id="6"
+            title="A/C Duct Cleaning & HVAC Services"
+            subtitle="Comprehensive Solutions for Your Needs"
+            description="Explore our wide range of services designed to meet your specific requirements. From professional consulting to hands-on support, we've got you covered."
+            // href="/services"
+            // iconName="default"
+            src="/images/duct-cleaning.png"
+            accentColor="#ffffff"
+            whatsappNumber="+971000000000"
+            phoneNumber="+971000000000"
+          />
+        </div>
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <ServicesSection
+            id="7"
+            title="A/C Chiller & Industrial AC Services"
+            subtitle="Comprehensive Solutions for Your Needs"
+            description="Explore our wide range of services designed to meet your specific requirements. From professional consulting to hands-on support, we've got you covered."
+            // href="/services"
+            // iconName="default"
+            src="/images/industrial.png"
+            accentColor="#ffffff"
+            whatsappNumber="+971000000000"
+            phoneNumber="+971000000000"
+          />
+        </div>
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-black">
+          <WhyChooseUs />
+        </div>
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-[#111111]">
+          <FaqSection />
+        </div>
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-black">
+          <CtaSection />
+        </div>
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-black">
+          <TestimonialsSection />
+        </div>
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-black">
+          <ContactUsSection />
+        </div>
+      </div>
     </div>
   );
 }
