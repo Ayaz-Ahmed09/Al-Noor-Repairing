@@ -15,7 +15,7 @@ const Heading = () => {
                                         duration: 0.8,
                                         ease: "easeInOut",
                                 }}
-                                className="flex flex-col items-center justify-center text-center mt-20"
+                                className="flex flex-col items-center justify-center text-center mt-44 md:mt-20"
                         >
                                 <span
                                         className="mb-6 inline-flex items-center gap-2 rounded-full
