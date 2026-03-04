@@ -53,18 +53,19 @@ export default function Home() {
   ];
   return (
     <div className="bg-black font-sans dark:bg-black">
+      {/* Group 1: The Sticky Stack. These sections will stack and reveal over each other perfectly, then scroll out of view together. */}
       <div className="relative w-full bg-black z-10">
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black">
           <HeroSection />
         </div>
-        <div className="relative w-full bg-black z-20">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <AboutSection />
         </div>
 
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <Heading />
         </div>
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <ServicesSection
             id="1"
             title="A/C Compressor Repair"
@@ -77,7 +78,7 @@ export default function Home() {
             phoneNumber="+971000000000"
           />
         </div>
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <ServicesSection
             id="2"
             title="A/C Cleaning"
@@ -91,7 +92,7 @@ export default function Home() {
             phoneNumber="+971000000000"
           />
         </div>
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <ServicesSection
             id="3"
             title="A/C General Maintenance"
@@ -105,7 +106,7 @@ export default function Home() {
             phoneNumber="+971000000000"
           />
         </div>
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <ServicesSection
             id="4"
             title="A/C Gas Refilling & Leak Detection"
@@ -119,7 +120,7 @@ export default function Home() {
             phoneNumber="+971000000000"
           />
         </div>
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <ServicesSection
             id="5"
             title="A/C Thermostat & Control Board Repair"
@@ -133,7 +134,7 @@ export default function Home() {
             phoneNumber="+971000000000"
           />
         </div>
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <ServicesSection
             id="6"
             title="A/C Duct Cleaning & HVAC Services"
@@ -147,7 +148,7 @@ export default function Home() {
             phoneNumber="+971000000000"
           />
         </div>
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-dvh w-full overflow-hidden bg-black shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
           <ServicesSection
             id="7"
             title="A/C Chiller & Industrial AC Services"
@@ -161,19 +162,24 @@ export default function Home() {
             phoneNumber="+971000000000"
           />
         </div>
-        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-black">
+      </div>
+
+      {/* Group 2: The remaining standalone sections. They begin flowing *after* Group 1 scrolls completely out. */}
+      {/* Retains lg:sticky desktop-only behavior but acts like normal content blocks on mobile. */}
+      <div className="relative w-full z-20 bg-black shadow-[0_-20px_50px_rgba(0,0,0,0.9)]">
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative bg-black">
           <WhyChooseUs />
         </div>
-        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-[#111111]">
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative bg-[#111111]">
           <FaqSection />
         </div>
-        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-black">
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative bg-black">
           <CtaSection />
         </div>
-        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-black">
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative bg-black">
           <TestimonialsSection />
         </div>
-        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative z-20 bg-black">
+        <div className="lg:sticky lg:top-0 min-h-screen w-full lg:overflow-hidden relative bg-black">
           <ContactUsSection />
         </div>
       </div>

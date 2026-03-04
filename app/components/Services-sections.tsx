@@ -64,7 +64,7 @@ export function ServicesSection({
         return (
                 <section
                         ref={ref}
-                        className="relative h-screen flex items-center justify-center overflow-hidden border-t border-white/5 w-full bg-black"
+                        className="relative h-dvh flex items-center justify-center overflow-hidden border-t border-white/5 w-full bg-black"
                 >
                         {/* Background Image Container - True Full Screen & Responsive */}
                         <div className="absolute inset-0 z-0">
@@ -84,9 +84,9 @@ export function ServicesSection({
                         {/* Content Container - No opacity/scale animations, instant load on scroll */}
                         <div className="relative z-10 w-full px-4 max-w-5xl mx-auto flex flex-col items-center justify-center text-center">
                                 <div className="w-full">
-                                        <div className="mb-6 md:mb-8">
+                                        <div className="mb-4 md:mb-8">
                                                 <Icon
-                                                        className="w-16 h-16 md:w-20 md:h-20 mx-auto"
+                                                        className="w-12 h-12 md:w-20 md:h-20 mx-auto"
                                                         style={{ color: accentColor }}
                                                 />
                                         </div>
@@ -99,7 +99,7 @@ export function ServicesSection({
                                                 {subtitle}
                                         </p>
 
-                                        <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed font-normal drop-shadow">
+                                        <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-6 md:mb-12 leading-relaxed font-normal drop-shadow line-clamp-4 md:line-clamp-none">
                                                 {description}
                                         </p>
 
